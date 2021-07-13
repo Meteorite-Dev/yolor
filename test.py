@@ -6,6 +6,8 @@ from pathlib import Path
 
 import numpy as np
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 import yaml
 from tqdm import tqdm
 

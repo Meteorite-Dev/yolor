@@ -2,6 +2,8 @@
 
 import numpy as np
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 import yaml
 from scipy.cluster.vq import kmeans
 from tqdm import tqdm

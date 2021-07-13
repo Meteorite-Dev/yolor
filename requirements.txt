@@ -1,17 +1,23 @@
 # pip install -qr requirements.txt
 
 # base ----------------------------------------
-Cython
-matplotlib>=3.2.2
-numpy>=1.18.5
-opencv-python>=4.1.2
-Pillow
 PyYAML>=5.3.1
 scipy>=1.4.1
-tensorboard>=1.5
-torch==1.7.0
-torchvision==0.8.1
-tqdm>=4.41.0
+
+# if you are not using colab must uncomment below
+# tensorboard>=1.5
+# torch==1.7.0
+# torchvision==0.8.1
+# numpy>=1.18.5
+# matplotlib>=3.2.2
+# Cython
+# opencv-python>=4.1.2
+# Pillow
+# tqdm>=4.41.0
+
+#colab base
+cloud-tpu-client==0.10 
+https://storage.googleapis.com/tpu-pytorch/wheels/torch_xla-1.7-cp37-cp37m-linux_x86_64.whl
 
 # logging -------------------------------------
 # wandb

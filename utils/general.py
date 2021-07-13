@@ -15,6 +15,8 @@ import cv2
 import matplotlib
 import numpy as np
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 import yaml
 
 from utils.google_utils import gsutil_getsize

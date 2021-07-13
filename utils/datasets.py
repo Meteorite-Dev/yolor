@@ -14,6 +14,8 @@ from threading import Thread
 import cv2
 import numpy as np
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 from PIL import Image, ExifTags
 from torch.utils.data import Dataset
 from tqdm import tqdm

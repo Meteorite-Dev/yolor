@@ -8,6 +8,8 @@ from contextlib import contextmanager
 from copy import deepcopy
 
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 import torch.backends.cudnn as cudnn
 import torch.nn as nn
 import torch.nn.functional as F
@@ -41,6 +43,8 @@ def init_torch_seeds(seed=0):
 
 def select_device(device='', batch_size=None):
     # device = 'cpu' or '0' or '0,1,2,3'
+    if device == 'tpu':
+        return torch.device('xm.xla_device()')
     cpu_request = device.lower() == 'cpu'
     if device and not cpu_request:  # if device requested other than 'cpu'
         os.environ['CUDA_VISIBLE_DEVICES'] = device  # set environment variable

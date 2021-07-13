@@ -12,6 +12,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 import yaml
 from PIL import Image
 from scipy.signal import butter, filtfilt

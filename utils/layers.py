@@ -3,6 +3,8 @@ import torch.nn.functional as F
 from utils.general import *
 
 import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
 from torch import nn
 
 try:
